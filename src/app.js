@@ -31,11 +31,13 @@ const upload = multer({ storage });
 
 
 // Middlewares
+const password = ''
+
 app.use(morgan('dev'))
 app.use(myConnection(mysql, {
     host: "localhost",
     user: 'root',
-    password: 'josefina22',
+    password: password,
     database: 'mydb'
 }, 'single'))
 app.use(express.urlencoded({extended: false}))

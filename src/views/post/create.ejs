@@ -1,0 +1,25 @@
+<%- include('../partials/_header2'); %>
+
+<h1>Crear post</h1>
+<form action="/create" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <input type="text" name="descripcion" placeholder="Descripcion" class="form-control">
+    </div>
+    <div>
+        <label for="image">Subir imagen:</label>
+        <input type="file" name="foto" id="foto" required>
+    </div>
+    <div class="form-group">
+        <input type="number" name="Rubro_idOficio" placeholder="idOficio" class="form-control">
+    </div>
+    <div class="form-group">
+        <input type="number" name="Usuario_idUsuario" placeholder="idUsuario" class="form-control">
+    </div>
+    <div class="form-group">
+        <input type="nunmber" name="valoracion" placeholder="Valoracion" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-primary">Save Post</button>
+</form>
+
+
+<%- include('../partials/_footer'); %>

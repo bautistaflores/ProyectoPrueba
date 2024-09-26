@@ -1,0 +1,31 @@
+<%- include('partials/_header2'); %>
+
+<h1>Publicaciones</h1>
+<a href="post/create" class="">Agregar Nuevo Post</a>
+
+<section class="seccion contenedor">
+
+    <div class="contenedor-posts">
+        <% if (data) { %>
+            <% for (var i = 0; i < data.length; i++ ) { %>
+            <div class="post">
+
+                <div class="contenido-post">
+                    <img src="<%= data[i].foto %>" />
+                    <p><%= data[i].descripcion %></p>
+                    <p>fecha: <%= data[i].fecha %></p>
+                    <p>Valoracion: <%= data[i].valoracion %></p>
+                </div>
+            </div>
+            <% } %>
+        <% } %>
+    </div>
+
+
+    <div class="alinear-derecha">
+        <a href="/" class="boton-verde">Ver Todas</a>
+    </div>
+</section>
+
+
+<%- include('partials/_footer'); %>

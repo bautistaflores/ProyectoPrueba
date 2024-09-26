@@ -1,0 +1,32 @@
+<%- include('partials/_header'); %>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-5">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/update/<%= data.idPost %>" method="post">
+                        <div class="form-group">
+                            <input type="text" name="descripcion" value="<%= data.descripcion %>" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="file" name="foto" id="foto" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" name="Rubro_idOficio" value="<%= data.Rubro_idOficio %>" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="number" name="Usuario_idUsuario" value="<%= data.Usuario_idUsuario %>" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="nunmber" name="valoracion" value="<%= data.valoracion %>" class="form-control">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Edit Post</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('partials/_footer'); %>
